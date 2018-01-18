@@ -1,0 +1,24 @@
+<layout name="layout" />
+<div class="body-content">
+    <div class="login-content-wrap container">
+        <div class="login-content-banner"></div>
+        <form action="__SELF__" METHOD="post" class="login-form-content">
+            <p class="login-title">账号登录</p>
+            <div class="login-input-wrap">
+                <i class="fa fa-mobile"></i>
+                <input type="text" placeholder="请输入手机号" name='phone' class="login-input">
+            </div>
+            <div class="login-input-wrap">
+                <i class="fa fa-lock"></i>
+                <input type="password" placeholder="请输入登录密码" name="password" class="login-input">
+            </div>
+            <button type="submit" class="login-botton">立即登录</button>
+            <div class="login-tip">
+                <a href="{:U('regist')}" class="register">免费注册</a>
+                <a href="{:U('forget')}" class="forget-password">忘记密码？</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<layout name="layout" />

@@ -1,0 +1,142 @@
+<layout name="layout" />
+<div class="center-table-wrap container body-content">
+    <div class="center-th-wrap center-tr-wrap">
+        <div class="center-table-th">用户姓名</div>
+        <div class="center-table-th">债务性质</div>
+        <div class="center-table-th">债务金额</div>
+        <div class="center-table-th">借款时间</div>
+        <div class="center-table-th">应还时间</div>
+        <div class="center-table-th">单号</div>
+        <div class="center-table-th">佣金</div>
+        <div class="center-table-th">备注</div>
+        <div class="center-table-th">拨打记录</div>
+        <div class="center-table-th">申请催收成功</div>
+        <div class="center-table-th">拨打电话</div>
+        <div class="center-table-th">更换</div>
+    </div>
+    <div class="center-td-wrap center-tr-wrap">
+        <div class="center-table-td"><a href="list.html">夏1</a></div>
+        <div class="center-table-td">小额贷</div>
+        <div class="center-table-td">3000</div>
+        <div class="center-table-td">2017/12/1</div>
+        <div class="center-table-td">2017/12/21</div>
+        <div class="center-table-td">123123123</div>
+        <div class="center-table-td">30</div>
+        <div class="center-table-td">
+            <img src="/Public/Home/images/icon.jpg" alt="" class="note-icon target-button" data-target="#note-modal" data-toggle="modal">
+        </div>
+        <div class="center-table-td">
+            <img src="/Public/Home/images/icon.jpg" alt="" class="target-button" data-target="#record-modal" data-toggle="modal">
+        </div>
+        <div class="center-table-td">
+            <img src="/Public/Home/images/icon.jpg" alt="" class="target-button" data-target="#evidence-modal" data-toggle="modal">
+        </div>
+        <div class="center-table-td">
+            <img src="/Public/Home/images/icon.jpg" alt="">
+        </div>
+        <div class="center-table-td">
+            <img src="/Public/Home/images/icon.jpg" alt="" class="target-button" data-target="#sure-modal" data-toggle="modal">
+        </div>
+    </div>
+    <div class="center-td-wrap center-tr-wrap">
+        <div class="center-table-td"><a href="list.html">夏1</a></div>
+        <div class="center-table-td">小额贷</div>
+        <div class="center-table-td">3000</div>
+        <div class="center-table-td">2017/12/1</div>
+        <div class="center-table-td">2017/12/21</div>
+        <div class="center-table-td">123123123</div>
+        <div class="center-table-td">30</div>
+        <div class="center-table-td"></div>
+        <div class="center-table-td"></div>
+        <div class="center-table-td"></div>
+        <div class="center-table-td"></div>
+        <div class="center-table-td"></div>
+    </div>
+</div>
+
+<div class="note-wrap modal" id='note-modal'>
+    <div class="note-head">备注<span class="dialog-close">关闭</span></div>
+    <div class="note-intro">
+        <span>债务信息：夏1</span>
+        <span>小额贷</span>
+        <span>3000</span>
+        <span>2017/12/1</span>
+        <span>123123123123</span>
+        <span>30</span>
+    </div>
+    <form class="note-content">
+        <div class="note-time">备注时间：2017/12/1 12:56</div>
+        <textarea name="" placeholder="请输入内容" class="note-textarea"></textarea>
+        <button class="note-button">提交备注</button>
+    </form>
+</div>
+<div class="note-wrap modal" id='record-modal'>
+    <div class="note-head">拨打记录<span class="dialog-close">关闭</span></div>
+    <div class="note-intro">
+        <div class="record-intro">
+            <span>夏1</span>
+            <span>2017/12/1</span>
+            <span>谈判</span>
+        </div>
+        <div>
+            备注：过段时间换。
+        </div>
+    </div>
+    <div class="note-intro">
+        <div class="record-intro">
+            <span>夏1</span>
+            <span>2017/12/1</span>
+            <span>谈判</span>
+        </div>
+        <div>
+            备注：过段时间换。
+        </div>
+    </div>
+</div>
+<div class="note-wrap modal" id='evidence-modal'>
+    <div class="note-head">申请催收成功<span class="dialog-close">关闭</span></div>
+    <div class="evidence-content clear" id="">
+        <img src="/Public/Home/images/add_pic.png" alt="" id='evidence-replace-input'>
+        <input type="file" style="display: none" id="evidence-input">
+        <div class="evidence-pic-content" id="evidence-content-wrap">
+
+        </div>
+    </div>
+    <div class="evidence-footer">
+        <button class="evidence-button">提交</button>
+        <p>我们将在1～3工作日内，将审核结果告知您</p>
+    </div>
+</div>
+<div class="note-wrap modal" id='sure-modal'>
+    <div class="note-head">是否更换当前债务信息？<span class="dialog-close">关闭</span></div>
+    <div class="sure-content">
+        <span>夏一</span>
+        <span>小额贷</span>
+        <span>3000</span>
+        <span>2017/1/1</span>
+        <span>1212121212</span>
+        <span>30</span>
+    </div>
+    <div class="evidence-footer">
+        <div class="evidence-botton">
+            <button class="evidence-button">是</button>
+            <button class="evidence-button">否</button>
+        </div>
+        <p>今天还剩次数3次</p>
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/upload.js"></script>
+<script>
+    var replaceSpan = document.querySelector("#evidence-replace-input"),
+            fileInput = document.querySelector("#evidence-input"),
+            add_image = document.querySelector("#evidence-content-wrap");
+    test = new Upload({
+                maxSize: 51200,
+                exts: ["png", "jpeg"],
+            },
+            fileInput, replaceSpan, add_image, null, "");
+</script>
+</html>
