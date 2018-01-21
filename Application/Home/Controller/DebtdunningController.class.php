@@ -44,16 +44,9 @@ class DebtdunningController extends Controller
         if($User->create(I('post.'),2)){
 
 //此处用框架方法有些问题,先用原生的
-//            $data['user_name'] = I('post.user_name');
-//            $data['card_number'] = I('post.card_number');
-//            $User->where('id=1')->save($data);
-//            if($User->save() !== false){}
-            if($User->add_user_info()){
-
+            if($User->save() !== FALSE){
+                        echo 'ok';die;
             }
-
-
-
         }
         $msg = $User->getError();
         $this->error($msg);
